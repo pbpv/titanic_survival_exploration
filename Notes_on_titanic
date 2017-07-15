@@ -1,0 +1,28 @@
+First try:
+   Added C class and age < 45
+   Tried C class and age < 18 - gae 78%
+   Tried S class and age < 18 - gave 77%
+   Tried Pclass < 2 and age < 20 - gave 79%
+   Kept C class as the percentage was better
+   Tried Age < 15 and Pclass< 2 - gave 79.46
+   Tried Age < 45 and Pclass < 3 and embarked == 'C' - 78%
+   Tried adding Age < 20 and Pclass < 3 and embarked == 'C' - 79.57%
+   Tried adding Parch < 3 and it did not change the percentage.
+   Adding new condition with Parch == 0 seem to linger around 79.12%
+   Adding Sibling checks
+      Tried age ranges (18 to 45) it made the percentage works.
+      Tried adding class, arch and embarked checked age (20 to 30) - 79.46%
+      Tried adding class, arch and embarked checked aged (30 to 50) - 79.80%
+      Tried adjusting the age with above checks (35 to 50) - 79.91%
+      Tried adjusting the age range to see if percentage improved. (38 to 50,42 to 50, 45 to 50), 47 to 50 seem to keep the % at 79.91
+   Adding new condition to narrow down the percentage for age range 20 - 50 and embark = c
+      Tried to add pclass checks < 3,age - 20 to 50, has a sibling, embarked = c and pclass < 3 - 79.91%
+      Tried to add pclass checks < 3,age - 20 to 50, has a sibling, embarked = c and pclass < 2 - 80.02%
+      Adjusting age again to see what keeps that percentage. lower limit is 24, dropped upper limit till 30 no change.It went up to 80.13% when upper limit was changed to 26. It stayed at 80.13%
+  Adding new condition with age between 20 and 50 and setting sibling to 0. - dropped to 80.02%
+      Adjusting the age range again. lower limit was adjusted to 25 - percentage changed to 80.25%
+      Adjusting upper limit to 45 changed the percentage to 80.36%
+  Adding new condition to check Embarked = S and kept other conditions like pclass < 2 parch == 0, the percent dropped.
+     Adding new condition with ticket containing PC - bumped up to 80.70%
+     Playing with lower limit of age, bumping up to 32 - 80.81%
+     Playing with lower limit of age, bumping up to 52 - 80.92%
